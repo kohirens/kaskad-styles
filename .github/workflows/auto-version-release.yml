@@ -8,6 +8,9 @@ concurrency:
   group: release-group
   cancel-in-progress: true
 
+permissions:
+  id-token: write
+
 run-name: ${{ github.actor }} is running avr workflow-selector
 
 jobs:
