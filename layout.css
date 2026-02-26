@@ -1,0 +1,17 @@
+@import url("/assets/css/layout-mobile.css") screen and (max-width: 640px);
+@import url("/assets/css/layout-desktop.css") screen and (min-width: 641px);
+
+/**
+ * Remember: These styles below are applied to all screens, while the others
+ * are only applied to their intended target.
+ */
+.site {
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.site__footer {
+    padding: 1em;
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+.columns-2 {
+    display: grid;
+    gap: 1em 1em;
+
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "header header"
+        "column-1 column-2";
+    height: 100%;
+    width: 100%;
+}
+
+.columns-2__header {
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+
+.columns-2__column-1 {
+    grid-area: column-1;
+}
+
+.columns-2__column-2 {
+    grid-area: column-2;
+}

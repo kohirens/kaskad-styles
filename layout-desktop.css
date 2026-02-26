@@ -1,0 +1,54 @@
+/**
+ * This file contains the CSS attributes that control a pages overall content
+ * layout and flow on a display/screen; not every little margin/padding/etc.
+ * It is O.K. to have attributes for a BEM style models be a part of it own file.
+ * However, if you want to override the layout for a model across the site,
+ * and its specific to this site, then this is a good place for that.
+ *
+ * Try to keep layout files to 500 lines. For example, if you have 550 lines
+ * break layout.css up into 2 files such as `layout-01.css` contains ~500 lines
+ * and `layout-02.css` ~50 or the remaining number of lines. This is just to
+ * keep them less overwhelming for humans to read or scan.
+ */
+
+.site {
+    display: grid;
+    gap: 1em 0;
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "head"
+        "body"
+        "foot";
+    height: 100%;
+    width: 100%;
+}
+
+.site__header {
+    display: grid;
+    grid-area: head;
+    grid-template-areas:
+        "left right";
+    list-style: none;
+    margin-top: 1.5em;
+}
+
+.site__header__left {
+    grid-area: left;
+    margin-bottom: 0.5em;
+}
+
+.site__header__right {
+    grid-area: right;
+    text-align: right;
+}
+
+.site__content {
+    grid-area: body;
+    display: flex;
+    justify-content: center;
+}
+
+.site__footer {
+    align-self: end;
+    grid-area: foot;
+}
