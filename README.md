@@ -22,3 +22,8 @@ unique enough to easily search. Apologies for using the `ā` character, I know
 that it may NOT be easy to type in. In most cases you can just use `a` since
 a lot of systems may rely on the ASCII character set. For example, notice the
 GitHub repository uses a regular `a` that is in the ASCII family.
+
+## Install
+
+To install, just clone this repository or download the zip file and extract
+where needed.
