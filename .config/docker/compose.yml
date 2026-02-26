@@ -1,0 +1,22 @@
+services:
+    frontend:
+      build:
+        args:
+          USER_NAME: ${USER_NAME}
+          REPO: ${REPO}
+        dockerfile: .config/docker/frontend/Dockerfile
+        context: ../..
+      image: kohirens/kaskad-styles:frontend
+      networks:
+        ds: null
+      tty: true
+      ports:
+        - "443:443"
+      volumes:
+        - ../../testdata:/usr/share/nginx/html
+        - ../../:/usr/share/nginx/html/assets/css/
+        - ./frontend/.ash_history:/home/${USER_NAME}/.ash_history
+
+networks:
+    ds: # ds = dualstack
+        enable_ipv6: true
